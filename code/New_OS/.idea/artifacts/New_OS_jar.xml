@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="New_OS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/New_OS_jar</output-path>
+    <root id="archive" name="New_OS.jar">
+      <element id="module-output" name="New_OS" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jgoodies-forms.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jgoodies-common.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

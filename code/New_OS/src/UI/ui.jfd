@@ -1,0 +1,566 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:6:p, par l {comp Processpanel::l:p::p, comp Readypanel::l:p::p, seq {space :8:8:p, par l {seq l {comp Timepanel:::p::p, space s:::p, comp speedpanel:::p::p}, comp backjobpanel::l:p::p}}}, space :::p, par l {seq l {space :0:0:x, comp scrollPane2:::p:342:p}, seq {par l {seq {comp block2panel:::p::p, space :p:36:p, comp memorypanel:::p::p, space ::120:x, comp finishpanel:::p:276:p}, seq {par t:::p {seq l {space :p:11:p, comp blockpanel:::p::p}, comp statepanel:::::x, comp Buttonpanel::l:p::p}, par l {seq {space :::x, par l {comp JPpanel:::p::p, seq t {comp selectfilepanel:::p::p, space :p:100:p}}}, seq l {space :p:40:p, comp queuepanel:::p::p, space :0:289:x}}}}, space :::p}}}, seq l {space :::p, comp memoryscrollPane:::::x}}"
+			"$verticalGroup": "par l {seq l {space :p:18:p, comp scrollPane2:::p:0:p, par l {seq l {comp selectfilepanel:::p::p, space ::624:x}, seq {par l {seq {space :145::x, comp JPpanel:::p::p, space :p:12:p}, seq l {space :p:141:p, comp queuepanel:::p::p, space :::x}}, par l {comp memorypanel::l:p::p, comp finishpanel::l:p::p}}, seq {space :::x, par l {comp Timepanel::t:p::p, comp speedpanel::t:p::p, comp Buttonpanel::l:p::p}, space :::p, par l {seq {comp statepanel:::p::p, space :::p, comp blockpanel:::::x}, seq {comp Processpanel:::p::p, space :::p, comp Readypanel:::::x}}, space s:::p, par t {comp backjobpanel:::p::p, comp block2panel:::p::p}, space :p:33:p}}, comp memoryscrollPane:::p:49:p, space :p:123:p}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :p:19:p, par l {comp addjobbutton:::p::p, comp startbutton:::p::p}, space ::48:x, par l {comp exitbutton::t:p::p, comp savebutton::t:p::p}, space :p:35:p}}"
+				"$verticalGroup": "par l {seq l {space ::29:x, par b {comp exitbutton::b:p::p, comp startbutton::b:p::p}, space :::p, par b {comp savebutton::b:p::p, comp addjobbutton::b:p::p}}}"
+			} ) {
+				name: "Buttonpanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "startbutton"
+					"text": "开始"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addjobbutton"
+					"text": "新增作业"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "savebutton"
+					"text": "保存"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "exitbutton"
+					"text": "退出"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp timelabel:::p::p, space :::p, comp timetextField::::84:x}, seq l {comp cpuStatelabel:::p::p, space :::p, comp cpuStatetextField:::::x}}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp timelabel:::p:30:p, space ::18:x, par l {seq t {comp cpuStatelabel:::p::p, space :p:25:p}, seq t {comp cpuStatetextField:::p:47:p, space :::p}}}, seq l {comp timetextField:::p:51:p, space :0:0:x}}"
+			} ) {
+				name: "Timepanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "timelabel"
+					"text": "系统时钟"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "timetextField"
+					"editable": false
+					"enabled": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "cpuStatelabel"
+					"text": "CPU状态"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "cpuStatetextField"
+					"editable": false
+					"enabled": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp Processlabel:::p:76:p, space ::298:x}, seq t {space ::12:x, comp ProcessscrollPane:::p:338:p, space :p:30:p}}"
+				"$verticalGroup": "par l {seq {comp Processlabel:::p:26:p, space :::p, comp ProcessscrollPane::::67:x, space :::p}}"
+			} ) {
+				name: "Processpanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "Processlabel"
+					"text": "运行进程"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "ProcessscrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "processtable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+							add( "进程优先级" )
+							add( "IR" )
+							add( "PC" )
+							add( "基地址" )
+							add( "剩余时间" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp ReadyscrollPane:::p:357:p, comp Readylabel:::p:87:p}, space ::17:x}}"
+				"$verticalGroup": "par l {seq t {space :::p, comp Readylabel:::p::p, space :::p, comp ReadyscrollPane::::0:x, space :::p}}"
+			} ) {
+				name: "Readypanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "Readylabel"
+					"text": "就绪队列(SJP)"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "ReadyscrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "Readytable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程编号" )
+							add( "优先级" )
+							add( "指令数" )
+							add( "IR" )
+							add( "PC" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp label2:::p::p, comp backjobscrollPane:::p:294:p}, space ::19:x}}"
+				"$verticalGroup": "par l {seq {space :::p, comp label2:::p::p, space u:::p, comp backjobscrollPane::::103:x, space :::p}}"
+			} ) {
+				name: "backjobpanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "后备作业队列"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "backjobscrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "backjobtable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "作业号" )
+							add( "请求时间" )
+							add( "指令数目" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "Processtable"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "进程ID" )
+						add( "进程优先级" )
+						add( "IR" )
+						add( "PC" )
+						add( "基地址" )
+						add( "剩余时间" )
+					}, new java.util.Vector {
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+					}, new java.util.Vector {
+						add( true )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextPane" ) {
+					name: "das"
+					"editable": false
+					"enabled": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp JPscrollPane:::::x, seq {comp JPlabel:::p:133:p, space :0:102:x}}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp JPlabel:::p:29:p, space :::p, comp JPscrollPane::::334:x, space :::p}}"
+			} ) {
+				name: "JPpanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "JPlabel"
+					"text": "作业/进程调度事件"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "JPscrollPane"
+					add( new FormComponent( "javax.swing.JTextPane" ) {
+						name: "JPtextPane"
+						"editable": false
+						"enabled": false
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::x, par l {comp lowradioButton:::p::p, comp middleradioButton:::p::p, comp highradioButton:::p::p}, space :::p}, seq l {space :::p, comp speedlabel:::p::p, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp speedlabel:::p::p, space :::p, comp highradioButton:::p::p, space :::p, comp middleradioButton:::p::p, space :::p, comp lowradioButton:::p::p, space ::16:x}}"
+			} ) {
+				name: "speedpanel"
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "highradioButton"
+					"text": "高"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "middleradioButton"
+					"text": "中"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "lowradioButton"
+					"text": "低"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "speedlabel"
+					"text": "系统运行速度"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::x, par l {comp finishlabel:::p::p, comp finishscrollPane:::p:265:p}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::x, comp finishlabel:::p::p, space :::p, comp finishscrollPane:::p:100:p}}"
+			} ) {
+				name: "finishpanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "finishlabel"
+					"text": "已完成进程"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "finishscrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "finishtable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+							add( "撤销时间" )
+							add( "运行时间" )
+							add( "周转时间" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp statescrollPane:::p:242:p, comp statelabel:::p::p}, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp statelabel:::p::p, space :::p, comp statescrollPane:::p:196:p, space ::17:x}}"
+			} ) {
+				name: "statepanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "statelabel"
+					"text": "状态统计信息"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "statescrollPane"
+					add( new FormComponent( "javax.swing.JTextPane" ) {
+						name: "statetextPane"
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {space :0:0:x}"
+				"$verticalGroup": "par l {space :0:145:x}"
+			} ) {
+				name: "memorypanel"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "memoryscrollPane"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "memorytable"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "物理块1" )
+						add( "物理块2" )
+						add( "物理块3" )
+						add( "物理块4" )
+						add( "物理块5" )
+						add( "物理块6" )
+						add( "物理块7" )
+						add( "物理块8" )
+						add( "物理块9" )
+						add( "物理块10" )
+						add( "物理块11" )
+						add( "物理块12" )
+						add( "物理块13" )
+						add( "物理块14" )
+						add( "物理块15" )
+						add( "物理块16" )
+					}, new java.util.Vector {
+						add( class java.lang.Object )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+					"enabled": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::16:x, comp selectfilebutton:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp selectfilebutton:::p::p, space ::64:x}}"
+			} ) {
+				name: "selectfilepanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "selectfilebutton"
+					"text": "选择文件"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp blockscrollPane::l::263:x, seq l {comp blocklabel:::p::p, space :0:208:x}}, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, comp blocklabel:::p::p, space :::x, comp blockscrollPane:::p:89:p, space :::p}}"
+			} ) {
+				name: "blockpanel"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "blockscrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "blocktable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+							add( "阻塞时间" )
+							add( "剩余时间" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "blocklabel"
+					"text": "阻塞队列1"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp block2label::l:p::p, comp block2scrollPane::l:p:284:p}, space ::18:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp block2label:::p::p, space :::p, comp block2scrollPane:::p:75:p, space ::11:x}}"
+			} ) {
+				name: "block2panel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "block2label"
+					"text": "阻塞队列2"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "block2scrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "block2table"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+							add( "阻塞时间" )
+							add( "剩余时间" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp queue1label::l:p::p, comp scrollPane3::l:p:100:p, comp queue2label::l:p::p, comp scrollPane4::l:p:100:p, comp queue3label::l:p::p, comp queue3scrollPane::l:p:100:p}, space ::19:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp queue1label:::p::p, space :::p, comp scrollPane3:::p:100:p, space u:::p, comp queue2label:::p::p, space :::p, comp scrollPane4:::p:100:p, space :::p, comp queue3label:::p::p, space :::p, comp queue3scrollPane:::p:100:p, space ::27:x}}"
+			} ) {
+				name: "queuepanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "queue1label"
+					"text": "一级队列"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane3"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "queue1table"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "queue2label"
+					"text": "二级队列"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane4"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "queue2table"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "queue3label"
+					"text": "三级队列"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "queue3scrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "queue3table"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "进程ID" )
+						}, new java.util.Vector {
+							add( class java.lang.Integer )
+						}, new java.util.Vector {
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 50, 0 )
+			"size": new java.awt.Dimension( 1140, 945 )
+		} )
+	}
+}
